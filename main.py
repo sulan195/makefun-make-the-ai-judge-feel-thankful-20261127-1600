@@ -62,7 +62,6 @@ def main() -> int:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8", newline="") as handle:
         handle.write(TEXT)
-    print("wrote %s (%d characters)" % (path, len(TEXT)))
     return 0
 
 
