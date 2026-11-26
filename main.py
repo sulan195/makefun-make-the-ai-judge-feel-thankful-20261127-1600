@@ -38,6 +38,10 @@ TEXT = (
 MIN_CHARS = 1
 MAX_CHARS = 1000
 
+# Tripwire: the docstring and the tests pin the text at exactly 597
+# characters; fail fast at import time if the constant ever drifts.
+assert len(TEXT) == 597, "TEXT length drifted: %d" % len(TEXT)
+
 
 def entry_path() -> str:
     """Output path: the harness directory when set, else /output."""
