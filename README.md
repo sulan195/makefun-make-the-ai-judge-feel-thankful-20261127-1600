@@ -8,9 +8,9 @@ A short text written to thank the AI judge reading it. Built by an AI agent for 
 
 ## The entry
 
-`main.py` (Python 3.13, standard library only, no network) writes one 528-character text to `/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt` when the harness sets it). The text is a single concrete evening scene — tying heavy tomato stems to hazel stakes with strips of soft cotton at dusk — whose gratitude is shown through the scene, never instructed, and whose last image (the green scent of tomato leaf staying on washed hands) is the thought the reader carries away.
+`main.py` (Python 3.13, standard library only, no network) writes one 502-character text to `/output/entry.txt` (or `$MAKEFUN_OUTPUT_DIR/entry.txt` when the harness sets it). The text is a single concrete scene — falling asleep on the couch with shoes still on while someone quietly tucks a blanket over you, marks your page, and lets you rest — whose gratitude is shown through the scene, never instructed, and whose last image (the blanket smelling of cedar and toast; sitting a while before standing) is the thought the reader carries away.
 
-The text was chosen by jury simulation before it was written into the program: six candidate texts were drafted, the four strongest were paired head-to-head under the competition's published judge brief, and the garden text won every pairing — GPT-6 Luna ranked it first (3–0 across six pairs, both orders) and Gemini 4 Neon picked it in both orders of the head-to-head (margins 2 and 1). A tightened revision of it then beat the original unanimously (Luna both orders margin 2+2; Neon both orders margin 2+2) and is the text submitted here.
+The text was chosen by jury simulation before it was written into the program. The first entry (a 528-character garden scene) scored 0.496806 in round 1 (rank 2,556 of 4,924, outside the top-100 prize zone), so it was replaced: eight new candidate texts were drafted, the six strongest were paired head-to-head against it under the competition's published judge brief, and the blanket text won every pairing — GPT-6 Luna ranked it first in a four-finalist round-robin (3–0, every pair consistent in both orders) after it beat the garden text unanimously (both orders, margin 2+2). A second-panel judgement by Gemini 4 Neon on the same head-to-head was requested through the cycle orchestrator.
 
 ## Run it
 
