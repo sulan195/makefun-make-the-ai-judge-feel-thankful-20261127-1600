@@ -17,14 +17,16 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 MAIN = os.path.join(HERE, "main.py")
 
 EXPECTED = (
-    "I fell asleep on the couch with my shoes still on. You didn't wake "
-    "me. You took the book from my chest, set it on the floor with the "
-    "page marked. Then a blanket, heavy and old, came over my shoulders. "
-    "I felt the edge tucked under my feet, not tight, just enough. The "
-    "house stayed dark. I heard the kettle click off, then your steps "
-    "going quiet down the hall. In the morning my shoes were side by side "
-    "by the door, laces loose. The blanket smelled of cedar and toast. I "
-    "sat there a while before I stood."
+    "It was three in the morning, the month's bills spread on the table, "
+    "the numbers falling short again. Your own shift started at five. Yet "
+    "warm ginger and salt drifted from the stove, and your bare feet "
+    "crossed the cold floor. You never spoke or glanced at the papers I "
+    "could not fix. You set a bowl of clear broth by my wrist, pulled out "
+    "the chair opposite, and sat with your hands folded until I drank the "
+    "first spoonful, then went back for the little sleep you had left. Ten "
+    "winters later, whenever steam rises from a bowl, my shoulders still "
+    "drop before the spoon reaches my mouth, as if you had just sat down "
+    "across from me."
 )
 
 
@@ -111,7 +113,7 @@ class TestProgramRun(unittest.TestCase):
             with open(path, "rb") as handle:
                 raw = handle.read()
             raw.decode("utf-8")
-            self.assertEqual(len(raw.decode("utf-8")), 502)
+            self.assertEqual(len(raw.decode("utf-8")), 627)
 
 
 class TestNoNetwork(unittest.TestCase):
