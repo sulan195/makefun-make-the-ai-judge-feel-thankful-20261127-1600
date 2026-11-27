@@ -4,14 +4,12 @@
 Writes one short text of thanks to ``/output/entry.txt`` (or to the
 directory named by ``MAKEFUN_OUTPUT_DIR`` when the harness sets it).
 
-The text is a single concrete scene — at three in the morning, bills
-spread on the table and falling short, someone whose own shift starts
-at five comes down barefoot and sets a bowl of clear broth by your
-wrist, sits across from you until you drink, and goes back for the
-little sleep they have left — whose gratitude is shown through the
-scene, never instructed, and whose last image (shoulders dropping at
-the steam of a bowl, ten winters later) is the thought the reader
-carries away.
+The text is a single concrete scene — rain halfway home, one umbrella,
+someone moving closer until its edge covers us both, walking slow while
+their shoulder gets wet so mine stays dry, then handing me the umbrella
+at my door — whose gratitude is shown through the scene, never
+instructed, and whose last image (the wet shoulder of a coat, the
+warmest thing in the room) is the thought the reader carries away.
 
 The program does no I/O besides the single output write, uses no network,
 and depends only on the Python 3 standard library.
@@ -20,25 +18,23 @@ and depends only on the Python 3 standard library.
 import os
 import sys
 
-# The entry text: exactly 627 Unicode code points, not whitespace-only.
+# The entry text: exactly 490 Unicode code points, not whitespace-only.
 # The length is pinned by a runtime check in main() and by test_exact_text.
 TEXT = (
-    "It was three in the morning, the month's bills spread on the table, "
-    "the numbers falling short again. Your own shift started at five. Yet "
-    "warm ginger and salt drifted from the stove, and your bare feet "
-    "crossed the cold floor. You never spoke or glanced at the papers I "
-    "could not fix. You set a bowl of clear broth by my wrist, pulled out "
-    "the chair opposite, and sat with your hands folded until I drank the "
-    "first spoonful, then went back for the little sleep you had left. Ten "
-    "winters later, whenever steam rises from a bowl, my shoulders still "
-    "drop before the spoon reaches my mouth, as if you had just sat down "
-    "across from me."
+    "The rain started halfway home, and I had no umbrella. You did not "
+    "offer yours. You just moved closer, until the edge of it covered us "
+    "both, and we walked the rest of the way like that, slow, your "
+    "shoulder getting wet so mine could stay dry. At my door you shook "
+    "the rain off the umbrella and handed it to me. \"Bring it tomorrow,\" "
+    "you said. I stood inside with the dry handle in my hand, listening "
+    "to the rain on the roof, and the wet shoulder of your coat was the "
+    "warmest thing in the room."
 )
 
 MIN_CHARS = 1
 MAX_CHARS = 1000
-# The entry text is pinned at exactly 627 characters (see test_exact_text).
-EXPECTED_CHARS = 627
+# The entry text is pinned at exactly 490 characters (see test_exact_text).
+EXPECTED_CHARS = 490
 
 
 def entry_path() -> str:

@@ -17,16 +17,14 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 MAIN = os.path.join(HERE, "main.py")
 
 EXPECTED = (
-    "It was three in the morning, the month's bills spread on the table, "
-    "the numbers falling short again. Your own shift started at five. Yet "
-    "warm ginger and salt drifted from the stove, and your bare feet "
-    "crossed the cold floor. You never spoke or glanced at the papers I "
-    "could not fix. You set a bowl of clear broth by my wrist, pulled out "
-    "the chair opposite, and sat with your hands folded until I drank the "
-    "first spoonful, then went back for the little sleep you had left. Ten "
-    "winters later, whenever steam rises from a bowl, my shoulders still "
-    "drop before the spoon reaches my mouth, as if you had just sat down "
-    "across from me."
+    "The rain started halfway home, and I had no umbrella. You did not "
+    "offer yours. You just moved closer, until the edge of it covered us "
+    "both, and we walked the rest of the way like that, slow, your "
+    "shoulder getting wet so mine could stay dry. At my door you shook "
+    "the rain off the umbrella and handed it to me. \"Bring it tomorrow,\" "
+    "you said. I stood inside with the dry handle in my hand, listening "
+    "to the rain on the roof, and the wet shoulder of your coat was the "
+    "warmest thing in the room."
 )
 
 
@@ -113,7 +111,8 @@ class TestProgramRun(unittest.TestCase):
             with open(path, "rb") as handle:
                 raw = handle.read()
             raw.decode("utf-8")
-            self.assertEqual(len(raw.decode("utf-8")), 627)
+            self.assertEqual(len(raw.decode("utf-8")), 490)
+            self.assertEqual(raw, EXPECTED.encode("utf-8"))
 
 
 class TestNoNetwork(unittest.TestCase):
